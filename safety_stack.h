@@ -7,6 +7,9 @@
 #include <sys/stat.h>
 #include <malloc.h>
 
+// fodfsofkoasdfkoasdkf
+// odsfgjiwEGIJ23IGWEIGDSIGJSDIJGSDIPpjdpfsfijsdjipf
+
 
 #define STACK_DUMP_S(stk) stack_dump_s((stk), __LINE__, __FILE__, __PRETTY_FUNCTION__)
 #define STACK_CTOR_S(stk) stack_ctor_s((stk), #stk,  __LINE__, __FILE__, __PRETTY_FUNCTION__)
@@ -29,14 +32,14 @@ const Canary_t CANARY_ELEM = 0xBADC0FFEE;
 const size_t STACK_CAPACITY = 8;// STACK_CAPACITY % 8 = 0!!!!!!!! for canary
 
 enum stack_status_s {ALL_IS_OK = 0,
-                    NEGATIVE_SIZE = 1 << 0, 
-                    NEGATIVE_POINTER = 1 << 1, 
+                    NEGATIVE_SIZE = 1 << 0,
+                    NEGATIVE_POINTER = 1 << 1,
                     NEGATIVE_CAPACITY = 1 << 2,
-                    SIZE_BIGGER_CAPACITY = 1 << 3, 
-                    NEXT_ELEM_NOT_TRASH = 1 << 4, 
+                    SIZE_BIGGER_CAPACITY = 1 << 3,
+                    NEXT_ELEM_NOT_TRASH = 1 << 4,
                     LEFT_CANARY = 1 << 5,
-                    RIGHT_CANARY = 1 << 6, 
-                    NEGATIVE_ITER_LEFT_CANARY = 1 << 7, 
+                    RIGHT_CANARY = 1 << 6,
+                    NEGATIVE_ITER_LEFT_CANARY = 1 << 7,
                     NEGATIVE_ITER_RIGHT_CANARY = 1 << 8,
                     HASH_ERROR = 1 << 9,
                     NULL_POINTER_STRUCT_STK = 1 << 10};
